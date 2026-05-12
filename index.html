@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reglas del Laboratorio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1><i class="fas fa-flask-vial"></i> Reglas del Laboratorio</h1>
+    <p>Normas esenciales para garantizar un ambiente seguro y ordenado</p>
+  </header>
+
+  <div class="container">
+    <div class="welcome-alert">
+      <i class="fas fa-info-circle"></i>
+      <span>¡Bienvenido! Lee atentamente todas las reglas antes de trabajar en el laboratorio.</span>
+    </div>
+
+    <div class="rules-grid">
+      <!-- Regla 1 -->
+      <div class="rule-card danger">
+        <div class="rule-icon">
+          <i class="fas fa-shield-alt" style="color: var(--danger);"></i>
+        </div>
+        <h2><i class="fas fa-check-circle"></i> Equipo de Protección</h2>
+        <p>Es obligatorio usar bata de laboratorio, lentes de seguridad y guantes en todo momento.</p>
+        <button class="btn-confirm" onclick="confirmarRegla('Equipo de Protección')">
+          <i class="fas fa-check"></i> Confirmar
+        </button>
+      </div>
+
+      <!-- Regla 2 -->
+      <div class="rule-card danger">
+        <div class="rule-icon">
+          <i class="fas fa-fire" style="color: var(--danger);"></i>
+        </div>
+        <h2><i class="fas fa-check-circle"></i> Manejo de Sustancias</h2>
+        <p>Nunca mezcles sustancias sin autorización. Sigue las instrucciones del profesor al pie de la letra.</p>
+        <button class="btn-confirm" onclick="confirmarRegla('Manejo de Sustancias')">
+          <i class="fas fa-check"></i> Confirmar
+        </button>
+      </div>
+
+      <!-- Regla 3 -->
+      <div class="rule-card warning">
+        <div class="rule-icon">
+          <i class="fas fa-handshake" style="color: var(--accent);"></i>
+        </div>
+        <h2><i class="fas fa-check-circle"></i> Orden y Limpieza</h2>
+        <p>Mantén tu área de trabajo limpia y organizada. Guarda los materiales en su lugar correspondiente.</p>
+        <button class="btn-confirm" onclick="confirmarRegla('Orden y Limpieza')">
+          <i class="fas fa-check"></i> Confirmar
+        </button>
+      </div>
+
+      <!-- Regla 4 -->
+      <div class="rule-card success">
+        <div class="rule-icon">
+          <i class="fas fa-user-friends" style="color: var(--success);"></i>
+        </div>
+        <h2><i class="fas fa-check-circle"></i> Comportamiento Responsable</h2>
+        <p>No corras, no empujes y no juegues dentro del laboratorio. Respeta a tus compañeros.</p>
+        <button class="btn-confirm" onclick="confirmarRegla('Comportamiento Responsable')">
+          <i class="fas fa-check"></i> Confirmar
+        </button>
+      </div>
+
+      <!-- Regla 5 -->
+      <div class="rule-card danger">
+        <div class="rule-icon">
+          <i class="fas fa-water" style="color: var(--danger);"></i>
+        </div>
+        <h2><i class="fas fa-check-circle"></i> Líquidos Peligrosos</h2>
+        <p>No comas ni bebas en el laboratorio. Evita derrames y reporta accidentes inmediatamente.</p>
+        <button class="btn-confirm" onclick="confirmarRegla('Líquidos Peligrosos')">
+          <i class="fas fa-check"></i> Confirmar
+        </button>
+      </div>
+
+      <!-- Regla 6 -->
+      <div class="rule-card warning">
+        <div class="rule-icon">
+          <i class="fas fa-exclamation-triangle" style="color: var(--accent);"></i>
+        </div>
+        <h2><i class="fas fa-check-circle"></i> Emergencias</h2>
+        <p>Conoce la ubicación de extintores, duchas de emergencia y botiquín. Actúa rápidamente ante cualquier incidente.</p>
+        <button class="btn-confirm" onclick="confirmarRegla('Emergencias')">
+          <i class="fas fa-check"></i> Confirmar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal de Confirmación -->
+  <div class="confirmation-box" id="confirmationBox">
+    <div class="confirmation-content">
+      <h3><i class="fas fa-clipboard-check"></i> Confirmación</h3>
+      <p>Confirmo que he leído y entendido la regla: <strong id="ruleNameDisplay"></strong></p>
+      <div class="confirmation-buttons">
+        <button class="btn btn-accept" onclick="aceptarRegla()">
+          <i class="fas fa-check"></i> Aceptar
+        </button>
+        <button class="btn btn-cancel" onclick="cancelarRegla()">
+          <i class="fas fa-times"></i> Cancelar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p><i class="fas fa-copyright"></i> 2024 Reglas del Laboratorio - Educación y Seguridad</p>
+  </footer>
+
+  <!-- Importar JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>
